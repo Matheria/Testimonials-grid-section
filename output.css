@@ -554,17 +554,25 @@ video {
   --tw-contain-style:  ;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-28 {
+  margin-top: 7rem;
 }
 
 .grid {
   display: grid;
 }
 
-.max-w-\[1440px\] {
-  max-width: 1440px;
+.max-w-\[1180px\] {
+  max-width: 1180px;
 }
 
 .gap-8 {
@@ -591,8 +599,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/images\/bg-pattern-quotation\.svg\'\)\] {
-  background-image: url('/images/bg-pattern-quotation.svg');
+.bg-\[url\(\'\.\/images\/bg-pattern-quotation\.svg\'\)\] {
+  background-image: url('./images/bg-pattern-quotation.svg');
 }
 
 .bg-\[right_2rem_top\] {
@@ -621,12 +629,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -645,12 +647,15 @@ body {
   .card {
     border-radius: 0.5rem;
     padding: 2rem;
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
   .card-container-name {
     margin-bottom: 1rem;
     display: inline-grid;
-    grid-template-columns: 40 1fr;
+    grid-template-columns: 40px 1fr;
     -moz-column-gap: 1rem;
          column-gap: 1rem;
     row-gap: 0px;
@@ -675,8 +680,9 @@ body {
 
   .card-info {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    padding-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     font-weight: 700;
   }
 
@@ -684,16 +690,16 @@ body {
     font-weight: 700;
     color: rgb(255 255 255 / 0.7);
   }
+}
 
-  .card-desc::before {
-    --tw-content: '“';
-    content: var(--tw-content);
-  }
+.before\:content-\[\'\201C\'\]::before {
+  --tw-content: '“';
+  content: var(--tw-content);
+}
 
-  .card-desc::after {
-    --tw-content: '”';
-    content: var(--tw-content);
-  }
+.after\:content-\[\'\201D\'\]::after {
+  --tw-content: '”';
+  content: var(--tw-content);
 }
 
 @media (min-width: 1024px) {
@@ -715,10 +721,6 @@ body {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:bg-\[right\] {
-    background-position: right;
   }
 
   .lg\:bg-\[right_7rem_top\] {
